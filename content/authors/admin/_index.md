@@ -152,4 +152,4 @@ awards:
 ---
 
 ## About Me
-Hello! My name is Ann-Kareen and I’m currently a first year Information Science PhD student at Cornell University. I’m currently based at Cornell Tech in New York City. I’m currently advised by Dr. Angelique Taylor at the Artificial Intelligence and Robotics Lab AIRLab.
+Hello! My name is Ann-Kareen and I’m a 3rd-year Information Science PhD student at Cornell University, based at Cornell Tech in New York City. I’m  advised by Dr. Angelique Taylor at the Artificial Intelligence and Robotics Lab AIRLab.
