@@ -1,3 +1,21 @@
+/* De-widgetize block section headers (collection + markdown blocks): left-align
+   instead of the theme's default centered "widget" look. */
+.hbb-section > .flex.flex-col.items-center.max-w-prose.mx-auto {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Bigger profile photo on the bio hero (theme default is 150px). */
+.avatar-wrapper {
+  width: 220px !important;
+  height: 220px !important;
+}
+
+.avatar {
+  max-width: 220px !important;
+  max-height: 220px !important;
+}
+
 .force-white-text *:not(a):not(.custom-button) {
   color: black !important;
 }
