@@ -32,15 +32,6 @@ sections:
           position: center
           parallax: false
 
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        I'm a PhD student passionate about co-designing technologies for mental well-being and mental health, primarily in HRI, while also considering their ethical and privacy limitations.
-    design:
-      columns: '1'
-
 ############################### EDIT HERE TO ADD PUBLICATIONS ############################### 
   - block: collection
     id: papers
