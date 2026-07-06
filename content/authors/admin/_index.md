@@ -67,29 +67,42 @@ education:
     date_end: 2024-05-01
     summary: |
       GPA: 3.7/4.0
-# work:
-#   - position: Director of Cloud Infrastructure
-#     company_name: GenCoin
-#     company_url: ''
-#     company_logo: ''
-#     date_start: 2021-01-01
-#     date_end: ''
-#     summary: |2-
-#       Responsibilities include:
-#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - position: Backend Software Engineer
-#     company_name: X
-#     company_url: ''
-#     company_logo: ''
-#     date_start: 2016-01-01
-#     date_end: 2020-12-31
-#     summary: |
-#       Responsibilities include:
-#       - Migrated infrastructure to a new data center
-#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+work:
+  - position: Software Engineering Intern
+    company_name: F5 Networks
+    company_url: ''
+    company_logo: ''
+    date_start: 2024-05-01
+    date_end: 2024-08-01
+    summary: |2-
+      Responsibilities include:
+      - Integrated the Bazel build system into 15 features across one of the BIG-IP repositories
+      - Changed the build schema of each feature from Go builds to Bazel builds by modifying existing Dockerfiles and using Gazelle BUILD.bazel files
+      - Cut the build time of the entire repository by more than half with the Bazel integration
+  - position: Software Engineering Intern
+    company_name: F5 Networks
+    company_url: ''
+    company_logo: ''
+    date_start: 2023-05-01
+    date_end: 2023-08-01
+    summary: |2-
+      Responsibilities include:
+      - Integrated into the NGINX Amplify team and worked on tasks in the Jira backlog
+      - Created a developer-side login system using Docker and Golang, allowing for faster access to developer tools
+      - Developed public-facing interactive features to display NGINX directive information
+      - Developed uniform styling for tags across the Amplify webpage
+  - position: New Technologist Intern
+    company_name: Microsoft & Cyborg Mobile
+    company_url: ''
+    company_logo: ''
+    date_start: 2022-06-01
+    date_end: 2022-08-01
+    summary: |2-
+      Responsibilities include:
+      - Developed an app using ReactJS that gamifies financial literacy for young adults
+      - Designed engineering specs, conducted user interviews, prototyped, and scoped out the team project
+      - Worked on backend features that calculate account balances and update account numbers on button click using React hooks and props
+      - Displayed messages and alerts during certain states using React hooks
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
