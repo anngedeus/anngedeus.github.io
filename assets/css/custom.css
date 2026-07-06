@@ -1,3 +1,20 @@
+/* The theme forces every page to be at least a full viewport tall so the footer
+   sticks to the bottom (min-height: 100vh + grid-template-rows: auto 1fr auto).
+   On content-light pages (e.g. Projects) that stretches a large empty gap before
+   the footer. Let the footer follow the content instead. */
+.page-wrapper {
+  min-height: auto;
+}
+
+/* Award icons: some source SVGs (e.g. nsf.svg) carry hardcoded pixel width/height
+   attributes from their original export, which the theme's `height: 100%`-only
+   sizing doesn't override, causing them to render at native size and overflow
+   the 28px icon box. Force both dimensions so every award icon scales correctly. */
+.w-7.h-7 > svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* Bigger profile photo on the bio hero (theme default is 150px). */
 .avatar-wrapper {
   width: 220px !important;
