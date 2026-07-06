@@ -43,10 +43,13 @@ profiles:
     url: https://orcid.org/0009-0006-3026-6717
 
 interests:
+  - Mental Well-being
+  - Mental Health
+  - Human-Robot Interaction
   - Human-AI Interaction
-  - Mental Health Techology
-  - AI Ethics
-  - LLM Evaluation
+  - Ethics
+  - Privacy
+  - Participatory Design
 
 education:
   - area: PhD Information Science

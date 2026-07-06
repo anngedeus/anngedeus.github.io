@@ -10,7 +10,7 @@ authors:
   - Nadine Wagener
   - Angelique Taylor
 
-date: '2026-01-01T00:00:00Z'
+date: '2026-07-01T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -47,4 +47,7 @@ url_project: ''
 url_slides: ''
 url_source: ''
 url_video: ''
+
+projects:
+  - nonverbal-ai-companions
 ---
