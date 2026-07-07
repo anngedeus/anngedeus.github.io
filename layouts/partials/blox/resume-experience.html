@@ -15,8 +15,10 @@
 {{end}}
 {{ $person := $person_page.Params }}
 {{ $is_education_first := $block.design.is_education_first | default false }}
+{{ $service_first := $block.design.service_first | default false }}
 {{ $show_work := $block.design.show_work | default true }}
 {{ $show_education := $block.design.show_education | default true }}
+{{ $show_service := $block.design.show_service | default true }}
 
 <div class="flex flex-col items-center max-w-prose mx-auto">
 <!--  <article class="prose prose-slate lg:prose-xl dark:prose-invert">-->
@@ -26,7 +28,7 @@
 <!--  </article>-->
 
 <!-- Need Gap >= 3 when flex-row due to negative margin on cols (-start-3) -->
-<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 {{ if $is_education_first }}flex-col-reverse{{end}}">
+<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 {{ if or $is_education_first $service_first }}flex-col-reverse{{end}}">
 
 {{ if and $show_work $person.work }}
 <div class="w-full">
@@ -102,6 +104,28 @@
       </li>
       {{ end }}
     </ol>
+</div>
+{{ end }}
+
+{{ if and $show_service $person.service }}
+<div class="w-full">
+  <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ i18n "academic_service" | default "Academic Service" }}</h3>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {{ range $idx, $key := $person.service }}
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.57-1.47-7.63-5.37-11.57-9.14C146.28,22.97,138.44,15.5,128,15.5s-18.28,7.47-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.14,82.56,40.22,77.31,40.3c-9.76.15-20.82.31-28.51,8s-7.85,18.75-8,28.51c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.57-5.37,7.63-9.14,11.57C23.47,109.72,16,117.56,16,128s7.47,18.28,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.57,1.47,7.63,5.37,11.57,9.14C109.72,232.53,117.56,240,128,240s18.28-7.47,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.57,5.37-7.63,9.14-11.57C232.53,146.28,240,138.44,240,128S232.53,109.72,225.86,102.82ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">{{.position}}</h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">{{.company_name}}</span>
+      {{ with .date }}
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        {{ (time .) | time.Format ($block.design.date_format | default "January 2006") }}
+      </time>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ol>
 </div>
 {{ end }}
 

@@ -11,6 +11,7 @@ design:
 # Page sections
 sections:
   - block: resume-experience
+    id: experience-list
     content:
       username: admin
     design:
@@ -18,6 +19,7 @@ sections:
       date_format: 'January 2006'
       show_work: true
       show_education: false
+      service_first: true
   - block: markdown
     content:
       title: 'Languages'

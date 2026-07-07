@@ -137,6 +137,14 @@ work:
 #         percent: 80
 #         icon: camera
 
+service:
+  - position: Reviewer
+    company_name: ACM CHI Conference on Human Factors in Computing Systems (CHI 2026)
+  - position: Reviewer
+    company_name: ACM/IEEE International Conference on Human-Robot Interaction (HRI 2026)
+  - position: Reviewer
+    company_name: ACM Designing Interactive Systems (DIS 2026)
+
 languages:
   - name: Haitian Kreyol
     percent: 100
@@ -162,6 +170,7 @@ awards:
     date: '2024-04-01'
     awarder: National Science Foundation
     icon: nsf
+    featured: true
     summary: |
       The program recognizes and supports outstanding graduate students who are pursuing full-time research-based master's and doctoral degrees in science, technology, engineering, and mathematics (STEM) or in STEM education.
   - title: Cornell Graduate School Deans Scholar

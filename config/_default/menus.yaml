@@ -10,15 +10,12 @@ main:
   - name: Papers
     url: /#papers
     weight: 11
-  - name: Experience
+  - name: Service and Experience
     url: experience/
     weight: 20
   - name: Awards
     url: awards/
     weight: 22
-  - name: Academic Service
-    url: academic-service/
-    weight: 23
   - name: Projects
     url: projects/
     weight: 30

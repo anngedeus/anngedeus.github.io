@@ -14,11 +14,11 @@
 <div class="research-education-box">
   <div class="research-education-col">
     <h3 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{{ $block.content.left_title | default "Recent News" }}</h3>
-    <ul class="space-y-4">
+    <ul class="space-y-6">
       {{ range $news }}
       <li class="news-talks-row">
         <div class="news-talks-date">{{ .Date | time.Format "Jan 2, 2006" }}</div>
-        <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Title }}</a>
+        <a href="{{ .RelPermalink }}" class="news-talks-link">{{ .Title }}</a>
       </li>
       {{ end }}
     </ul>
@@ -26,12 +26,12 @@
 
   <div class="research-education-col">
     <h3 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{{ $block.content.right_title | default "Recent & Upcoming Talks" }}</h3>
-    <ul class="space-y-4">
+    <ul class="space-y-6">
       {{ range $talks }}
       <li class="news-talks-row">
         <div class="news-talks-date">{{ .Date | time.Format "Jan 2, 2006" }}</div>
         <div>
-          <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Params.event | default .Title }}</a>
+          <a href="{{ .RelPermalink }}" class="news-talks-link">{{ .Params.event | default .Title }}</a>
           {{ with .Params.location }}<div class="text-sm text-gray-500 dark:text-gray-400">{{ . }}</div>{{ end }}
         </div>
       </li>

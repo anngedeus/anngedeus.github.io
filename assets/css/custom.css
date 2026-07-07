@@ -12,6 +12,16 @@
   font-size: 0.875rem;
 }
 
+.news-talks-link {
+  color: #059669;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.news-talks-link:hover {
+  text-decoration: underline;
+}
+
 /* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
 .research-education-box {
   max-width: 72rem;
@@ -179,7 +189,8 @@ html {
    which is a *different* class from `.max-w-prose` above and caps at its own
    default 65ch — so it stayed narrow inside the now-wide card, leaving a big
    empty gap on the right. Let it fill the card. */
-#awards-list .prose {
+#awards-list .prose,
+#experience-list .prose {
   max-width: none !important;
 }
 
