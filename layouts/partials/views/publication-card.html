@@ -1,0 +1,43 @@
+{{/* Custom view: publication-card. Thumbnail + title + authors + venue + abstract + links. */}}
+{{ $item := .item }}
+{{ $resource := partial "functions/get_featured_image.html" $item }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col sm:flex-row gap-6">
+
+  {{ with $resource }}
+    {{ $image := .Fill "400x400 Center" }}
+    {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+    <div class="sm:w-48 flex-shrink-0 flex flex-col gap-3">
+      <a href="{{ $item.RelPermalink }}">
+        <img class="w-full rounded-md object-cover" loading="lazy" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $item.Title | plainify }}">
+      </a>
+      {{ if $has_attachments }}
+      <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
+        {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+      </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  <div class="flex-1 min-w-0">
+    <a href="{{ $item.RelPermalink }}">
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">{{ $item.Title | markdownify | emojify }}</h3>
+    </a>
+    <div class="text-gray-700 dark:text-gray-300 mb-1">
+      {{ partial "page_metadata_authors" $item }}
+    </div>
+    {{ with ($item.Params.publication_short | default $item.Params.publication) }}
+    <div class="text-gray-500 dark:text-gray-400 mb-3">{{ . | markdownify }}</div>
+    {{ end }}
+    {{ with $item.Params.abstract }}
+    <p class="text-gray-600 dark:text-gray-400">{{ . | markdownify }}</p>
+    {{ end }}
+    {{ if and (not $resource) $has_attachments }}
+    <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm mt-3">
+      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+    </div>
+    {{ end }}
+  </div>
+
+</div>

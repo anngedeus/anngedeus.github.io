@@ -25,6 +25,8 @@ publication_types: ['paper-conference']
 publication: In *ACM International Conference on Multimodal Interaction (ICMI 2026)*
 publication_short: In *ICMI 2026*
 
+abstract: '[Add abstract here]'
+
 tags:
   - Human-AI Interaction
   - Backchanneling

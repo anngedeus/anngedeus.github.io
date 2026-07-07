@@ -1,3 +1,17 @@
+/* Cursive font for the navbar name/logo. */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/DancingScript-Bold.woff2) format('woff2');
+}
+
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.75rem;
+}
+
 /* Award icons: some source SVGs (e.g. nsf.svg) carry hardcoded pixel width/height
    attributes from their original export, which the theme's `height: 100%`-only
    sizing doesn't override, causing them to render at native size and overflow
