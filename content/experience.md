@@ -16,27 +16,8 @@ sections:
     design:
       # Hugo date format
       date_format: 'January 2006'
-      # Education or Experience section first?
-      is_education_first: false
-  # - block: resume-skills
-  #   content:
-  #     title: Skills & Hobbies
-  #     username: admin
-  #   design:
-  #     show_skill_percentage: false
-  - block: markdown
-    content:
-      title: 'Academic Service'
-      text: |-
-        - Reviewer, ACM CHI Conference on Human Factors in Computing Systems (CHI 2026)
-        - Reviewer, ACM/IEEE International Conference on Human-Robot Interaction (HRI 2026)
-        - Reviewer, ACM Designing Interactive Systems (DIS 2026)
-    design:
-      columns: '1'
-  - block: resume-awards
-    content:
-      title: Awards
-      username: admin
+      show_work: true
+      show_education: false
   - block: markdown
     content:
       title: 'Languages'

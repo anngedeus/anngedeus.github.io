@@ -1,14 +1,66 @@
-/* Site-wide font: Josefin Sans, replacing the theme's default (Inter var). */
+/* Compact News/Talks cards (layouts/partials/views/news-card.*.html). */
+.news-card {
+  max-width: 56rem;
+  margin: 0 auto 1.25rem auto;
+  padding: 1.25rem 1.5rem;
+  background-color: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+.news-card-title {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.news-card-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.4rem 0;
+}
+
+.news-card-row + .news-card-row {
+  border-top: 1px solid #eef0f2;
+}
+
+.news-card-date {
+  flex-shrink: 0;
+  width: 3rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.news-card-text {
+  color: #1f2937;
+  font-size: 0.9375rem;
+}
+
+.news-card-text a {
+  color: #059669;
+}
+
+/* Site-wide font: Roboto, replacing the theme's default (Inter var). */
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 100 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(/fonts/JosefinSans-Variable.woff2) format('woff2');
+  src: url(/fonts/Roboto-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/Roboto-Bold.woff2) format('woff2');
 }
 
 html {
-  font-family: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif !important;
+  font-family: 'Roboto', ui-sans-serif, system-ui, sans-serif !important;
 }
 
 /* Widen the narrow ~65ch prose column used by markdown blocks (e.g. Research
