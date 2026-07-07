@@ -26,7 +26,7 @@ publishDate: '2026-07-06T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Nordic Conference on Human-Computer Interaction (NordiCHI 2026)*
+publication: In *ACM Nordic Conference on Human-Computer Interaction (NordiCHI 2026)*
 publication_short: In *NordiCHI 2026*
 
 tags:

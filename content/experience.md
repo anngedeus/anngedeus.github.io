@@ -37,8 +37,13 @@ sections:
     content:
       title: Awards
       username: admin
-  - block: resume-languages
+  - block: markdown
     content:
-      title: Languages
-      username: admin
+      title: 'Languages'
+      text: |-
+        - Haitian Kreyol — Native Speaker
+        - English — Fluent
+        - French — Proficient in Speaking & Writing
+    design:
+      columns: '1'
 ---

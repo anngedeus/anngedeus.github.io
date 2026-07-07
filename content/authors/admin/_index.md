@@ -151,6 +151,13 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
+  - title: DLI Doctoral Fellow
+    url: https://dli.tech.cornell.edu/doctoralfellows
+    date: '2026-05-22'
+    awarder: Digital Life Initiative, Cornell Tech
+    icon: cornell
+    summary: |
+      The DLI Doctoral Fellowship Program engages PhD students in systematic inquiry into the ethical and political implications of digital technologies, centering on issues such as fairness, privacy, and accountability. Fellows participate in the weekly Digital Life Seminar, a series of multidisciplinary presentations from guest speakers, and present their own works-in-progress.
   - title: NSF Graduate Research Fellow
     url: https://www.research.gov/grfp/AwardeeList.do?method=loadAwardeeList
     date: '2024-04-01'
