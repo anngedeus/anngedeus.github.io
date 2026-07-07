@@ -56,8 +56,7 @@ education:
     institution: Cornell University
     date_start: 2024-08-01
     date_end: 2029-06-01
-    summary: |
-      Advised by [Dr. Angelique Taylor](https://www.angeliquemtaylor.com/)
+    summary: 
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com'
