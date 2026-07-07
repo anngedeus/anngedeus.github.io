@@ -1,3 +1,16 @@
+/* Site-wide font: Josefin Sans, replacing the theme's default (Inter var). */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url(/fonts/JosefinSans-Variable.woff2) format('woff2');
+}
+
+html {
+  font-family: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif !important;
+}
+
 /* Widen the narrow ~65ch prose column used by markdown blocks (e.g. Research
    Interests) and collection block headers/subtitles (e.g. Featured Publications
    intro text), so paragraph text isn't stranded in a narrow strip. */
@@ -118,6 +131,12 @@
 
 .cv-download-button:hover {
   background-color: #f3f4f6;
+}
+
+/* Green bold key terms in the Research Interests section (plain white background,
+   so no contrast risk like the hero's green blob). */
+#research-interests strong {
+  color: #059669;
 }
 
 

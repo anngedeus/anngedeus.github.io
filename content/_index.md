@@ -38,6 +38,7 @@ sections:
           parallax: false
 
   - block: markdown
+    id: research-interests
     content:
       title: 'Research Interests'
       text: |-
