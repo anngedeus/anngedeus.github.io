@@ -40,10 +40,12 @@
   max-width: none !important;
 }
 
-/* Breathing room between the Academic Service and Experience timelines, which
-   otherwise sit flush against each other. */
+/* Breathing room between the Academic Service and Experience timelines. Matches
+   the 6rem gap between blocks (3rem page-level spacing top+bottom) so all three
+   parts of the Service & Experience page — Academic Service, Experience, and
+   Languages — are evenly spaced instead of the previous mismatched values. */
 #experience-list .w-full + .w-full {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 /* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
