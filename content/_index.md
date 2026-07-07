@@ -43,7 +43,7 @@ sections:
       username: admin
       left_title: 'Research Interests'
       left_text: |-
-        I design and study **AI companions and robots** that support **mental well-being** and **mental health**, with a focus on **human-robot** and **human-AI interaction**. I'm especially interested in the **ethics** and **privacy** implications of these systems, and I use **participatory design** methods to center the people they're built for.
+        I study **human-AI** and **human-robot interaction** for **mental health** and **mental well-being**, from commercial AI chatbots to tabletop social robots, focusing on the **ethics** and **privacy** implications of these systems and using **participatory design** methods to center the people they're built for. s
       right_title: 'Education'
 
 ############################### EDIT HERE TO ADD PUBLICATIONS ############################### 
