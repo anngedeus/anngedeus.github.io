@@ -52,4 +52,9 @@ url_video: ''
 
 projects:
   - talk-to-me-kindly
+
+# Placeholder link to the published paper. Fill in `url` once available.
+links:
+  - name: Paper
+    url: ''
 ---

@@ -1,3 +1,10 @@
+/* Widen the narrow ~65ch prose column used by markdown blocks (e.g. Research
+   Interests) and collection block headers/subtitles (e.g. Featured Publications
+   intro text), so paragraph text isn't stranded in a narrow strip. */
+.max-w-prose {
+  max-width: 56rem !important;
+}
+
 /* Publication card view (layouts/partials/views/publication-card.html). Plain CSS
    because the theme's precompiled Tailwind bundle wasn't scanned against this
    local template, so ad-hoc utility classes here would silently do nothing. */
@@ -72,18 +79,18 @@
   color: #065f46 !important;
 }
 
-a.custom-button {
-  all: unset; /* Reset inherited styles */
-  background-color: white !important;
-  color: black !important;
-  border: 2px solid black !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 0.5rem !important;
-  font-weight: 600 !important;
-  display: inline-block !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  cursor: pointer;
+/* CV download button (layouts/partials/blox/resume-biography-3.html). The vendor
+   template hardcoded `dark:bg-gray-800` etc., which rendered black because the
+   hero section's own `dark` class (used only to force white text) unintentionally
+   triggered Tailwind's dark-mode variant. Plain, deterministic styling instead. */
+.cv-download-button {
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.cv-download-button:hover {
+  background-color: #f3f4f6;
 }
 
 

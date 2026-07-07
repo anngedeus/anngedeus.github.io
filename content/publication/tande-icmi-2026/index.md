@@ -50,4 +50,9 @@ url_video: ''
 
 projects:
   - nonverbal-ai-companions
+
+# Placeholder link to the published paper. Fill in `url` once available.
+links:
+  - name: Paper
+    url: ''
 ---
