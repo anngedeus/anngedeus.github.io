@@ -21,6 +21,7 @@ sections:
       show_education: false
       service_first: true
   - block: markdown
+    id: languages-section
     content:
       title: 'Languages'
       text: |-

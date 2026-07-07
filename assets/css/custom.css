@@ -22,6 +22,30 @@
   text-decoration: underline;
 }
 
+/* News items are plain text now (no link/destination), same color as Talks for
+   visual consistency. */
+.news-talks-text {
+  color: #059669;
+}
+
+/* Languages block on the Experience page (content/experience.md) used the
+   markdown block's default centered layout, while Academic Service/Experience
+   above it are left-aligned — make it match. */
+#languages-section .items-center {
+  align-items: flex-start !important;
+  text-align: left;
+}
+
+#languages-section .prose {
+  max-width: none !important;
+}
+
+/* Breathing room between the Academic Service and Experience timelines, which
+   otherwise sit flush against each other. */
+#experience-list .w-full + .w-full {
+  margin-top: 3rem;
+}
+
 /* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
 .research-education-box {
   max-width: 72rem;

@@ -18,7 +18,7 @@
       {{ range $news }}
       <li class="news-talks-row">
         <div class="news-talks-date">{{ .Date | time.Format "Jan 2, 2006" }}</div>
-        <a href="{{ .RelPermalink }}" class="news-talks-link">{{ .Title }}</a>
+        <span class="news-talks-text">{{ .Title }}</span>
       </li>
       {{ end }}
     </ul>
