@@ -33,7 +33,7 @@
     <div class="text-gray-700 dark:text-gray-300 mb-1">
       {{ partial "page_metadata_authors" $item }}
     </div>
-    {{ with ($item.Params.publication_short | default $item.Params.publication) }}
+    {{ with ($item.Params.publication | default $item.Params.publication_short) }}
     <div class="text-gray-500 dark:text-gray-400 mb-3">{{ . | markdownify }}</div>
     {{ end }}
     {{ with $item.Params.abstract }}

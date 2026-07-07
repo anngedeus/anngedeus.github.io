@@ -5,6 +5,22 @@
   max-width: 56rem !important;
 }
 
+/* Align every homepage section (Publications, Talks, News) to the same width so
+   their edges line up. Each view template (article-grid, date-title-summary, ...)
+   picks its own container width independently — article-grid even narrows itself
+   to 500px when there's only a single item (exactly the "Talks" case) — so without
+   this override every section is a different width and nothing lines up. */
+.blox-collection .container,
+.blox-collection .max-w-3xl {
+  max-width: 56rem !important;
+}
+
+.blox-collection > .flex.flex-col.items-center {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Publication card view (layouts/partials/views/publication-card.html). Plain CSS
    because the theme's precompiled Tailwind bundle wasn't scanned against this
    local template, so ad-hoc utility classes here would silently do nothing. */
@@ -36,6 +52,17 @@
   flex-wrap: wrap;
   column-gap: 0.75rem;
   row-gap: 0.25rem;
+}
+
+.pub-card-links a {
+  color: #059669;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pub-card-links a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 640px) {
