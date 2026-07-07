@@ -163,10 +163,24 @@ html {
 /* Award icons: some source SVGs (e.g. nsf.svg) carry hardcoded pixel width/height
    attributes from their original export, which the theme's `height: 100%`-only
    sizing doesn't override, causing them to render at native size and overflow
-   the 28px icon box. Force both dimensions so every award icon scales correctly. */
+   the 28px icon box. Force both dimensions so every award icon scales correctly.
+   Also bump the icon box itself up from the default 28px for more visual presence. */
+.w-7.h-7 {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
 .w-7.h-7 > svg {
   width: 100% !important;
   height: 100% !important;
+}
+
+/* Award card summary text (resume-awards.html) uses Tailwind's `.prose` class,
+   which is a *different* class from `.max-w-prose` above and caps at its own
+   default 65ch — so it stayed narrow inside the now-wide card, leaving a big
+   empty gap on the right. Let it fill the card. */
+#awards-list .prose {
+  max-width: none !important;
 }
 
 /* Bigger profile photo on the bio hero (theme default is 150px). */

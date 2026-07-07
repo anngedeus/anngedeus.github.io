@@ -9,6 +9,7 @@ design:
 # Page sections
 sections:
   - block: resume-awards
+    id: awards-list
     content:
       title: Awards
       username: admin
