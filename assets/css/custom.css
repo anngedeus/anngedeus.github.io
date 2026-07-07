@@ -1,10 +1,3 @@
-/* Left-align the "Publications" heading, instead of the theme's default centered
-   widget look used elsewhere (which the site otherwise keeps). */
-#papers > .items-center {
-  align-items: flex-start !important;
-  text-align: left;
-}
-
 /* News/Talks row layout (layouts/partials/blox/news-talks.html): date on the left,
    text on the right. */
 .news-talks-row {
