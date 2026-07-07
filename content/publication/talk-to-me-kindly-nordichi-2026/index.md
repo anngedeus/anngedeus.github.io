@@ -14,7 +14,7 @@ authors:
   - So-Yeon Yoon
   - Angelique Taylor
 
-date: '2026-07-01T00:00:00Z'
+date: '2026-06-30T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -28,8 +28,6 @@ publication_types: ['paper-conference']
 # Publication name and optional abbreviated publication name.
 publication: In *Nordic Conference on Human-Computer Interaction (NordiCHI 2026)*
 publication_short: In *NordiCHI 2026*
-
-abstract: '[Add abstract here]'
 
 tags:
   - Well-being

@@ -10,7 +10,7 @@ authors:
   - Nadine Wagener
   - Angelique Taylor
 
-date: '2026-07-01T00:00:00Z'
+date: '2026-07-02T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -24,8 +24,6 @@ publication_types: ['paper-conference']
 # Publication name and optional abbreviated publication name.
 publication: In *ACM International Conference on Multimodal Interaction (ICMI 2026)*
 publication_short: In *ICMI 2026*
-
-abstract: '[Add abstract here]'
 
 tags:
   - Human-AI Interaction

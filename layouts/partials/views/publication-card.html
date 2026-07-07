@@ -1,26 +1,31 @@
 {{/* Custom view: publication-card. Thumbnail + title + authors + venue + abstract + links. */}}
+{{/* Note: layout-critical classes (row/column switch, thumbnail width, flex-grow) are defined
+     in assets/css/custom.css as plain CSS rather than Tailwind utility classes, because this
+     theme ships a precompiled Tailwind bundle that was never scanned against this local
+     template — arbitrary utility classes used only here (e.g. `sm:flex-row`, `sm:w-32`,
+     `flex-1`) silently have no effect since no matching CSS rule exists in that bundle. */}}
 {{ $item := .item }}
 {{ $resource := partial "functions/get_featured_image.html" $item }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
 
-<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col sm:flex-row gap-6">
+<div class="pub-card w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
   {{ with $resource }}
-    {{ $image := .Fill "400x400 Center" }}
+    {{ $image := .Fit "320x320" }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
-    <div class="sm:w-48 flex-shrink-0 flex flex-col gap-3">
+    <div class="pub-card-thumb">
       <a href="{{ $item.RelPermalink }}">
-        <img class="w-full rounded-md object-cover" loading="lazy" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $item.Title | plainify }}">
+        <img class="pub-card-thumb-img rounded-md" loading="lazy" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $item.Title | plainify }}">
       </a>
       {{ if $has_attachments }}
-      <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
+      <div class="pub-card-links text-sm">
         {{ partial "page_links" (dict "page" $item "is_list" 1) }}
       </div>
       {{ end }}
     </div>
   {{ end }}
 
-  <div class="flex-1 min-w-0">
+  <div class="pub-card-body">
     <a href="{{ $item.RelPermalink }}">
       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">{{ $item.Title | markdownify | emojify }}</h3>
     </a>
@@ -34,7 +39,7 @@
     <p class="text-gray-600 dark:text-gray-400">{{ . | markdownify }}</p>
     {{ end }}
     {{ if and (not $resource) $has_attachments }}
-    <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm mt-3">
+    <div class="pub-card-links text-sm" style="margin-top: 0.75rem;">
       {{ partial "page_links" (dict "page" $item "is_list" 1) }}
     </div>
     {{ end }}
