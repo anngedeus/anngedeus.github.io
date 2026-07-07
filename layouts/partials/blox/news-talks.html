@@ -16,8 +16,8 @@
     <h3 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{{ $block.content.left_title | default "Recent News" }}</h3>
     <ul class="space-y-4">
       {{ range $news }}
-      <li>
-        <div class="text-sm text-gray-500 dark:text-gray-400">{{ .Date | time.Format "Jan 2, 2006" }}</div>
+      <li class="news-talks-row">
+        <div class="news-talks-date">{{ .Date | time.Format "Jan 2, 2006" }}</div>
         <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Title }}</a>
       </li>
       {{ end }}
@@ -28,10 +28,12 @@
     <h3 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{{ $block.content.right_title | default "Recent & Upcoming Talks" }}</h3>
     <ul class="space-y-4">
       {{ range $talks }}
-      <li>
-        <div class="text-sm text-gray-500 dark:text-gray-400">{{ .Date | time.Format "Jan 2, 2006" }}</div>
-        <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Params.event | default .Title }}</a>
-        {{ with .Params.location }}<div class="text-sm text-gray-500 dark:text-gray-400">{{ . }}</div>{{ end }}
+      <li class="news-talks-row">
+        <div class="news-talks-date">{{ .Date | time.Format "Jan 2, 2006" }}</div>
+        <div>
+          <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Params.event | default .Title }}</a>
+          {{ with .Params.location }}<div class="text-sm text-gray-500 dark:text-gray-400">{{ . }}</div>{{ end }}
+        </div>
       </li>
       {{ end }}
     </ul>

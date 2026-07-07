@@ -1,3 +1,17 @@
+/* News/Talks row layout (layouts/partials/blox/news-talks.html): date on the left,
+   text on the right. */
+.news-talks-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.news-talks-date {
+  flex-shrink: 0;
+  width: 6.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
 /* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
 .research-education-box {
   max-width: 72rem;
