@@ -57,7 +57,7 @@ education:
     date_start: 2024-08-01
     date_end: 2029-06-01
     summary: |
-      Advised by [Professor Angelique Taylor](https://www.angeliquemtaylor.com/)
+      Advised by [Dr. Angelique Taylor](https://www.angeliquemtaylor.com/)
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com'

@@ -1,6 +1,6 @@
 /* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
 .research-education-box {
-  max-width: 56rem;
+  max-width: 72rem;
   margin: 0 auto;
   padding: 2rem;
   border: 1px solid #e5e7eb;
@@ -65,7 +65,7 @@ html {
    Interests) and collection block headers/subtitles (e.g. Featured Publications
    intro text), so paragraph text isn't stranded in a narrow strip. */
 .max-w-prose {
-  max-width: 56rem !important;
+  max-width: 72rem !important;
 }
 
 /* Align every homepage section (Publications, Talks, News) to the same width so
@@ -75,11 +75,11 @@ html {
    this override every section is a different width and nothing lines up. */
 .blox-collection .container,
 .blox-collection .max-w-3xl {
-  max-width: 56rem !important;
+  max-width: 72rem !important;
 }
 
 .blox-collection > .flex.flex-col.items-center {
-  max-width: 56rem;
+  max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
 }
