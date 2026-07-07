@@ -3,8 +3,6 @@
   max-width: 72rem;
   margin: 0 auto;
   padding: 2rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -66,6 +64,15 @@ html {
    intro text), so paragraph text isn't stranded in a narrow strip. */
 .max-w-prose {
   max-width: 72rem !important;
+}
+
+/* Exception: the bio hero's text column also carries `max-w-prose`, but there it
+   sits in a `flex-grow` layout next to the photo with `justify-center` on the
+   parent. Widening it lets the column consume nearly all available space,
+   leaving nothing for justify-center to balance against the photo — which is
+   why the hero drifted to the left edge. Restore its original, narrower cap. */
+.resume-biography .max-w-prose {
+  max-width: 65ch !important;
 }
 
 /* Align every homepage section (Publications, Talks, News) to the same width so
