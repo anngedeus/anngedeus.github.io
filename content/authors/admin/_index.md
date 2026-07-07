@@ -168,4 +168,6 @@ awards:
 ---
 
 ## About Me
-Hello! My name is Ann-Kareen and I’m a 3rd-year Information Science PhD student at Cornell University, based at Cornell Tech in New York City. I’m  advised by Dr. Angelique Taylor at the Artificial Intelligence and Robotics Lab AIRLab.
+Hi! I'm a PhD student in Information Science at Cornell University, based at Cornell Tech in New York City, where I'm advised by [Professor Angelique Taylor](https://www.angeliquemtaylor.com/) at the Artificial Intelligence and Robotics Lab (AIRLab).
+
+Before Cornell, I received my B.S. in Computer Science from the University of Florida, where I worked with [Dr. Kyla McMullen](https://kylamcmullen.com/) in the SoundPad Lab and [Dr. Juan Gilbert](https://www.juangilbert.com/) in the Computing for Social Good Lab.

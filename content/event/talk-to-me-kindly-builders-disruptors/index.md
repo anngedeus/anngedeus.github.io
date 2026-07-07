@@ -13,7 +13,7 @@ address:
 summary: A talk on designing AI companions to foster positive self-talk in young adults.
 
 # Talk start and end times.
-date: '2025-12-05T00:00:00Z'
+date: '2025-12-02T00:00:00Z'
 all_day: true
 
 # Schedule page publish date (NOT talk date).
@@ -36,6 +36,11 @@ slides: ""
 
 projects:
   - talk-to-me-kindly
+
+# Placeholder link to the related paper(s). Fill in `url` once ready.
+links:
+  - name: Papers
+    url: ''
 ---
 
 <div class="slide-carousel" id="slide-carousel-1">

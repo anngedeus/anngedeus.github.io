@@ -66,6 +66,12 @@
   color: black !important;
 }
 
+/* Links inside the bio text were left white by the rule above (meant for genuinely
+   dark hero backgrounds), which is unreadable against this hero's light green blob. */
+.force-white-text .bio-text a:not(.custom-button) {
+  color: #065f46 !important;
+}
+
 a.custom-button {
   all: unset; /* Reset inherited styles */
   background-color: white !important;

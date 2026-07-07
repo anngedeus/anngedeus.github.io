@@ -4,6 +4,11 @@ title: ""
 date: 2022-10-24
 type: landing
 
+# Disable the "X min read" indicator on every page (cascades site-wide from the homepage).
+cascade:
+  params:
+    reading_time: false
+
 design:
   # Default section spacing
   spacing: "2.5rem"
@@ -31,6 +36,14 @@ sections:
           size: cover
           position: center
           parallax: false
+
+  - block: markdown
+    content:
+      title: 'Research Interests'
+      text: |-
+        I design and study **AI companions and robots** that support **mental well-being** and **mental health**, with a focus on **human-robot** and **human-AI interaction**. I'm especially interested in the **ethics** and **privacy** implications of these systems, and I use **participatory design** methods to center the people they're built for.
+    design:
+      columns: '1'
 
 ############################### EDIT HERE TO ADD PUBLICATIONS ############################### 
   - block: collection
