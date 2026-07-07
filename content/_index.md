@@ -37,14 +37,14 @@ sections:
           position: center
           parallax: false
 
-  - block: markdown
+  - block: research-education
     id: research-interests
     content:
-      title: 'Research Interests'
-      text: |-
+      username: admin
+      left_title: 'Research Interests'
+      left_text: |-
         I design and study **AI companions and robots** that support **mental well-being** and **mental health**, with a focus on **human-robot** and **human-AI interaction**. I'm especially interested in the **ethics** and **privacy** implications of these systems, and I use **participatory design** methods to center the people they're built for.
-    design:
-      columns: '1'
+      right_title: 'Education'
 
 ############################### EDIT HERE TO ADD PUBLICATIONS ############################### 
   - block: collection
@@ -60,43 +60,13 @@ sections:
 ############################### EDIT HERE TO ADD PUBLICATIONS ############################### 
 
 
-  - block: collection
-    id: news
+  - block: news-talks
+    id: news-and-talks
     content:
-      card_title: 'News'
-      # Page type to display. E.g. post, talk, publication...
-      page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      view: news-card
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  - block: collection
-    id: talks
-    content:
-      card_title: 'Talks and Events'
-      filters:
-        folders:
-          - event
-    design:
-      view: news-card
-      spacing:
-        padding: [0, 0, 0, 0]
+      left_title: 'Recent News'
+      right_title: 'Recent & Upcoming Talks'
+      news_count: 5
+      talks_count: 5
   # - block: cta-card
   #   demo: true # Only display this section in the Hugo Blox Builder demo site
   #   content:

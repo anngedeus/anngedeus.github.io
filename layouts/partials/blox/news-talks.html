@@ -1,0 +1,39 @@
+{{/* Custom block: news-talks. Recent News and Recent & Upcoming Talks side by
+     side in one bordered box, divided into a left and right half. Mirrors
+     research-education.html's layout. */}}
+{{ $block := .wcBlock }}
+
+{{ $news_count := $block.content.news_count | default 5 }}
+{{ $news := where site.RegularPages "Type" "post" }}
+{{ $news = $news | first $news_count }}
+
+{{ $talks := where site.RegularPages "Section" "event" }}
+{{ $talks_count := $block.content.talks_count | default 5 }}
+{{ $talks = $talks | first $talks_count }}
+
+<div class="research-education-box">
+  <div class="research-education-col">
+    <h3 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{{ $block.content.left_title | default "Recent News" }}</h3>
+    <ul class="space-y-4">
+      {{ range $news }}
+      <li>
+        <div class="text-sm text-gray-500 dark:text-gray-400">{{ .Date | time.Format "Jan 2, 2006" }}</div>
+        <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="research-education-col">
+    <h3 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{{ $block.content.right_title | default "Recent & Upcoming Talks" }}</h3>
+    <ul class="space-y-4">
+      {{ range $talks }}
+      <li>
+        <div class="text-sm text-gray-500 dark:text-gray-400">{{ .Date | time.Format "Jan 2, 2006" }}</div>
+        <a href="{{ .RelPermalink }}" class="font-semibold text-gray-900 dark:text-white hover:underline">{{ .Params.event | default .Title }}</a>
+        {{ with .Params.location }}<div class="text-sm text-gray-500 dark:text-gray-400">{{ . }}</div>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

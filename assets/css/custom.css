@@ -1,45 +1,43 @@
-/* Compact News/Talks cards (layouts/partials/views/news-card.*.html). */
-.news-card {
+/* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
+.research-education-box {
   max-width: 56rem;
-  margin: 0 auto 1.25rem auto;
-  padding: 1.25rem 1.5rem;
-  background-color: #fafafa;
+  margin: 0 auto;
+  padding: 2rem;
   border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
-}
-
-.news-card-title {
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #111827;
-  margin-bottom: 0.75rem;
-}
-
-.news-card-row {
+  border-radius: 0.75rem;
   display: flex;
-  gap: 1rem;
-  padding: 0.4rem 0;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.news-card-row + .news-card-row {
-  border-top: 1px solid #eef0f2;
+@media (min-width: 768px) {
+  .research-education-box {
+    flex-direction: row;
+  }
+
+  .research-education-col {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
+  .research-education-col:first-child {
+    padding-right: 2rem;
+    border-right: 1px solid #e5e7eb;
+  }
+
+  .research-education-col:last-child {
+    padding-left: 0;
+  }
 }
 
-.news-card-date {
-  flex-shrink: 0;
-  width: 3rem;
-  color: #6b7280;
-  font-size: 0.875rem;
+/* Bigger project card title/summary text on the Projects page only (scoped via
+   the block's id so Talks, which reuses the same article-grid view, is unaffected). */
+#projects-grid h2 {
+  font-size: 1.5rem;
 }
 
-.news-card-text {
-  color: #1f2937;
-  font-size: 0.9375rem;
-}
-
-.news-card-text a {
-  color: #059669;
+#projects-grid p {
+  font-size: 1rem;
 }
 
 /* Site-wide font: Roboto, replacing the theme's default (Inter var). */

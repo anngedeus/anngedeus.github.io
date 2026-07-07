@@ -1,6 +1,0 @@
-{{/* Custom view: news-card. Compact bordered card with a small-caps header and
-     tight date-prefixed rows. Used for both the News and Talks homepage sections. */}}
-{{ $block := .page }}
-<div class="news-card">
-  <div class="news-card-title">{{ $block.content.card_title | default $block.content.title }}</div>
-  <div class="news-card-rows">

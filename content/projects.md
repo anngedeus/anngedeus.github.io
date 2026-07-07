@@ -10,8 +10,8 @@ design:
 # Page sections
 sections:
   - block: collection
+    id: projects-grid
     content:
-      title: Selected Projects
       text: ''
       filters:
         folders:
