@@ -40,12 +40,14 @@
   max-width: none !important;
 }
 
-/* Breathing room between the Academic Service and Experience timelines. Matches
-   the 6rem gap between blocks (3rem page-level spacing top+bottom) so all three
-   parts of the Service & Experience page — Academic Service, Experience, and
-   Languages — are evenly spaced instead of the previous mismatched values. */
-#experience-list .w-full + .w-full {
-  margin-top: 6rem;
+/* Breathing room between the Academic Service and Experience timelines. Uses
+   `gap` rather than a margin on adjacent siblings: `service_first` reorders the
+   two sections visually via `flex-col-reverse`, which doesn't change DOM order,
+   so a margin-top on the DOM-adjacent sibling actually landed at the top of the
+   whole container instead of between the two sections. `gap` isn't affected by
+   the reversal. */
+#experience-list .items-center > div {
+  gap: 4rem;
 }
 
 /* Research Interests + Education side-by-side box (layouts/partials/blox/research-education.html). */
