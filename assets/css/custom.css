@@ -325,5 +325,24 @@ html {
   text-decoration: none;
 }
 
+/* Navbar icon buttons (search + dark/light toggle, layouts/partials/components/headers/navbar.html).
+   Both are plain inline-block buttons whose SVG icons differ in size (16px vs 18px)
+   and sit in different font-size/line-height contexts, so each icon's default
+   baseline alignment lands at a different height — the theme toggle visibly sits
+   higher than the search icon. Centering each icon inside its own button via flex
+   makes both align on the same line regardless of their intrinsic SVG metrics. */
+#search_toggle,
+.theme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0 !important;
+}
+
+#search_toggle svg,
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
 
 
