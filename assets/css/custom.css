@@ -339,6 +339,17 @@ html {
   margin-top: 0 !important;
 }
 
+/* Nudge the desktop nav menu (Bio, Papers, ...) further right, independent of the
+   search/theme-toggle icons on the far right. `.navbar` uses `justify-content:
+   space-between` across 3 flex children (logo / menu / icons); margin-left on the
+   menu shifts just that item without affecting the icons' position. Scoped to the
+   `lg` breakpoint since below that the menu becomes the full-width mobile dropdown. */
+@media (min-width: 1024px) {
+  #nav-menu {
+    margin-left: 4rem;
+  }
+}
+
 #search_toggle svg,
 .theme-toggle svg {
   width: 18px;
