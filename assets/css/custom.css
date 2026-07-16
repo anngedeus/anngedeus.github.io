@@ -253,13 +253,13 @@ html {
 
 /* Bigger profile photo on the bio hero (theme default is 150px). */
 .avatar-wrapper {
-  width: 220px !important;
-  height: 220px !important;
+  width: 280px !important;
+  height: 280px !important;
 }
 
 .avatar {
-  max-width: 220px !important;
-  max-height: 220px !important;
+  max-width: 280px !important;
+  max-height: 280px !important;
 }
 
 .force-white-text *:not(a):not(.custom-button) {
@@ -270,6 +270,14 @@ html {
    dark hero backgrounds), which is unreadable against this hero's light green blob. */
 .force-white-text .bio-text a:not(.custom-button) {
   color: #065f46 !important;
+}
+
+/* Fade the hero's green blob background (assets/media/website.svg) toward the
+   page background. `.home-section-bg` is the sole element carrying the blob
+   image + black backing color (position:absolute, behind all content, no
+   text), so fading its opacity doesn't affect anything layered above it. */
+#section-resume-biography-3 .home-section-bg {
+  opacity: 0.5;
 }
 
 /* CV download button (layouts/partials/blox/resume-biography-3.html). The vendor
