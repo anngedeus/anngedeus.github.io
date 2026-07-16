@@ -346,7 +346,7 @@ html {
    `lg` breakpoint since below that the menu becomes the full-width mobile dropdown. */
 @media (min-width: 1024px) {
   #nav-menu {
-    margin-left: 8rem;
+    margin-left: 14rem;
   }
 
   .navbar-brand {
