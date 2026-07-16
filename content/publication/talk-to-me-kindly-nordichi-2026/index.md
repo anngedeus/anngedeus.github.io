@@ -41,6 +41,10 @@ tags:
 # Display this page in the Featured widget?
 featured: true
 
+# Show the featured image only on cards/lists, not as a header on this page.
+image:
+  preview_only: true
+
 url_pdf: ''
 url_code: ''
 url_dataset: ''

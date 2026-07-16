@@ -275,5 +275,33 @@ html {
   color: #059669;
 }
 
+/* Publication single-page link row (layouts/_default/single.html, scoped via the
+   `pub-page-links` wrapper class) styled as solid green buttons instead of the
+   theme's plain icon+text links. The icon SVGs use `stroke="currentcolor"`, so
+   they pick up the white text color automatically. */
+.pub-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pub-page-links a.hb-attachment-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #059669;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.pub-page-links a.hb-attachment-link:hover {
+  background-color: #047857;
+  text-decoration: none;
+}
+
 
 

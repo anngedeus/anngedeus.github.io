@@ -66,7 +66,7 @@
         {{ end }}
         </div>
 
-        <div class="mt-3">
+        <div class="mt-3 {{ if eq .Type "publication" }}pub-page-links{{ end }}">
           {{ partial "page_links_div.html" . }}
         </div>
       </div>
@@ -103,14 +103,18 @@
       </div>
       {{end}}
 
-      {{/* EVENT / PUBLICATION METADATA */}}
-      {{ if .Params.abstract | or (eq .Type "publication") | or (eq .Type "event") }}
-        <div class="max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
+      {{/* Abstract: full-width, larger text, kept out of the compact metadata grid below
+           so it reads like the main content of the page rather than a label/value row. */}}
+      {{ if .Params.abstract }}
+      <div class="max-w-none my-6">
+        <h2 class="font-bold text-2xl mb-3">{{ i18n "abstract" }}</h2>
+        <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">{{ .Params.abstract | markdownify }}</p>
+      </div>
+      {{ end }}
 
-        {{ if .Params.abstract }}
-          <div class="font-bold text-2xl">{{ i18n "abstract" }}</div>
-          <div>{{ .Params.abstract | markdownify }}</div>
-        {{ end }}
+      {{/* EVENT / PUBLICATION METADATA */}}
+      {{ if (eq .Type "publication") | or (eq .Type "event") }}
+        <div class="max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
 
         {{/* If the type is Uncategorized, hide the type. */}}
         {{ if $pub_type_display }}
