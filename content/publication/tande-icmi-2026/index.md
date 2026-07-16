@@ -27,14 +27,11 @@ publication_short: In *ICMI 2026*
 
 tags:
   - Human-AI Interaction
-  - Backchanneling
-  - Large Language Model
   - Embodied Conversational Agents
   - Multimodal Interaction
   - Well-being
   - Young Adults
-  - Voice-based chatbot
-  - Gender
+  - Voice-Based Chatbot
 
 # Display this page in the Featured widget?
 featured: true
