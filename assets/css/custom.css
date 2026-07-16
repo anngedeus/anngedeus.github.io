@@ -354,25 +354,19 @@ html {
   }
 }
 
-/* Logo badge ("AKG", set via header.navbar.logo.text in params.yaml): a small
-   monogram-style badge instead of plain text, in the site's green accent color
-   and a serif face so it reads as a distinct wordmark from the Roboto body text. */
+/* Logo ("AKG", set via header.navbar.logo.text in params.yaml): green text in a
+   serif face so it reads as a distinct wordmark from the Roboto body text. */
 .navbar-brand {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.75rem;
-  background-color: #059669;
-  color: #ffffff !important;
-  border-radius: 0.4rem;
+  color: #059669 !important;
   font-family: Georgia, 'Times New Roman', ui-serif, serif;
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: 0.14em;
-  transition: background-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .navbar-brand:hover {
-  background-color: #047857;
+  color: #047857 !important;
 }
 
 #search_toggle svg,
