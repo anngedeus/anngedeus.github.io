@@ -277,7 +277,7 @@ html {
    image + black backing color (position:absolute, behind all content, no
    text), so fading its opacity doesn't affect anything layered above it. */
 #section-resume-biography-3 .home-section-bg {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* CV download button (layouts/partials/blox/resume-biography-3.html). The vendor
@@ -354,7 +354,7 @@ html {
    `lg` breakpoint since below that the menu becomes the full-width mobile dropdown. */
 @media (min-width: 1024px) {
   #nav-menu {
-    margin-left: 14rem;
+    margin-left: 20rem;
   }
 
   .navbar-brand {
