@@ -362,6 +362,15 @@ html {
   }
 }
 
+/* Push further right on wider screens, where there's more room before the menu
+   crowds the icon cluster (kept separate from the 1024px tier above, which is
+   already close to the icons at that narrower width). */
+@media (min-width: 1280px) {
+  #nav-menu {
+    margin-left: 26rem;
+  }
+}
+
 /* Logo ("AKG", set via header.navbar.logo.text in params.yaml): green text in a
    serif face so it reads as a distinct wordmark from the Roboto body text. */
 .navbar-brand {
