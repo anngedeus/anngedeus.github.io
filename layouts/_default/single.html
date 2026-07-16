@@ -25,9 +25,11 @@
         {{- .Title -}}
       </h1>
 
+      {{ if ne .Type "publication" }}
       <div class="mt-3">
         {{ partial "tags" . }}
       </div>
+      {{ end }}
 
       <div class="mt-4 mb-16">
       <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
