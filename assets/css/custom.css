@@ -278,10 +278,15 @@ html {
 /* Publication single-page link row (layouts/_default/single.html, scoped via the
    `pub-page-links` wrapper class) styled as solid green buttons instead of the
    theme's plain icon+text links. The icon SVGs use `stroke="currentcolor"`, so
-   they pick up the white text color automatically. */
-.pub-page-links {
+   they pick up the white text color automatically.
+   The actual <a> buttons are direct children of an inner wrapper <div> from the
+   theme's page_links_div.html, not of `.pub-page-links` itself, so the flex
+   container has to target that child div, not `.pub-page-links` directly, or
+   the buttons stay inline-flex and misalign on their default text baseline. */
+.pub-page-links > div {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
 }
 

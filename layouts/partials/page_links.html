@@ -1,7 +1,8 @@
 {{/* Local override of the theme's partials/page_links.html: on publication pages, the
-     Code/GitHub button is dropped from the single-page link row. It still shows on the
-     homepage publication cards, which use the separate views/publication-card-links.html
-     partial instead of this one. */}}
+     Code/GitHub button is dropped from the single-page link row, url_source is labeled
+     "arXiv" and moved right after the PDF button (ahead of Project). These buttons still
+     show on the homepage publication cards, which use the separate
+     views/publication-card-links.html partial instead of this one. */}}
 {{ $is_list := .is_list }}
 {{ $page := .page }}
 {{ $link := "" }}
@@ -32,6 +33,18 @@
 <a class="hb-attachment-link {{ if $is_list }}hb-attachment-small{{else}}hb-attachment-large{{end}}" href="{{ . }}" target="_blank" rel="noopener">
   {{ partial "functions/get_icon" (dict "name" "document-text" "attributes" "style=\"height: 1em\" class='inline-block'") }}
   {{ i18n "btn_pdf" }}
+</a>
+{{ end }}
+{{ with $page.Params.url_source }}
+  {{ $resource := $page.Resources.GetMatch . }}
+  {{ if $resource }}
+    {{ $link = $resource.RelPermalink }}
+  {{ else }}
+    {{ $link = . | relURL }}
+  {{ end }}
+<a class="hb-attachment-link {{ if $is_list }}hb-attachment-small{{else}}hb-attachment-large{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+  {{ partial "functions/get_icon" (dict "name" "document" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+  arXiv
 </a>
 {{ end }}
 {{ $resource := $page.Resources.GetMatch "cite.bib" }}
@@ -127,18 +140,6 @@
 <a class="hb-attachment-link {{ if $is_list }}hb-attachment-small{{else}}hb-attachment-large{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ partial "functions/get_icon" (dict "name" "video-camera" "attributes" "style=\"height: 1em\" class='inline-block'") }}
   {{ i18n "btn_video" }}
-</a>
-{{ end }}
-{{ with $page.Params.url_source }}
-  {{ $resource := $page.Resources.GetMatch . }}
-  {{ if $resource }}
-    {{ $link = $resource.RelPermalink }}
-  {{ else }}
-    {{ $link = . | relURL }}
-  {{ end }}
-<a class="hb-attachment-link {{ if $is_list }}hb-attachment-small{{else}}hb-attachment-large{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
-  {{ partial "functions/get_icon" (dict "name" "document" "attributes" "style=\"height: 1em\" class='inline-block'") }}
-  {{ i18n "btn_source" }}
 </a>
 {{ end }}
 {{ with $page.Params.doi }}

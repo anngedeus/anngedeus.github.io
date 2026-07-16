@@ -1,14 +1,11 @@
-{{/* Bracketed link row for publication cards: Paper Link, PDF, GitHub, Project (in that order).
+{{/* Bracketed link row for publication cards: Paper Link, PDF, Project (in that order).
      Paper Link and PDF render as placeholders (linking to "#") even when their URL
      field is empty, so it's clear where the real link will go once it's filled in.
-     GitHub only renders when url_code is set. */}}
+     No GitHub/Code link here by design — removed permanently per site owner. */}}
 {{ $item := . }}
 
 <span class="pub-card-link">[<a href="{{ $item.Params.url_paper_link | default "#" }}">Paper Link</a>]</span>
 <span class="pub-card-link">[<a href="{{ $item.Params.url_pdf | default "#" }}">PDF</a>]</span>
-{{ with $item.Params.url_code }}
-<span class="pub-card-link">[<a href="{{ . }}">GitHub</a>]</span>
-{{ end }}
 {{ range $item.Params.projects }}
   {{ with (site.GetPage (printf "project/%s" .)) }}
 <span class="pub-card-link">[<a href="{{ .RelPermalink }}">Project</a>]</span>
