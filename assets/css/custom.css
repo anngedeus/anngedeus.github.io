@@ -391,15 +391,6 @@ html {
   color: #047857 !important;
 }
 
-/* Rounded bottom corners on the fixed navbar, echoing the rounded-corner look of
-   the publication cards. #site-header already carries its own white/dark
-   background + shadow, so rounding it directly clips cleanly with no extra
-   overflow handling needed. */
-#site-header.header {
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-
 #search_toggle svg,
 .theme-toggle svg {
   width: 18px;
