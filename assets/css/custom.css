@@ -273,11 +273,16 @@ html {
 }
 
 /* Fade the hero's green blob background (assets/media/website.svg) toward the
-   page background. `.home-section-bg` is the sole element carrying the blob
-   image + black backing color (position:absolute, behind all content, no
-   text), so fading its opacity doesn't affect anything layered above it. */
+   page background, and round its corners like the publication cards. Insetting
+   it with a margin (rather than 0) is what makes the rounding visible instead
+   of running off the edges of the full-bleed section. `.home-section-bg` is the
+   sole element carrying the blob image + black backing color (position:
+   absolute, behind all content, no text), so these don't affect anything
+   layered above it. */
 #section-resume-biography-3 .home-section-bg {
   opacity: 0.6;
+  margin: 0.75rem;
+  border-radius: 1.5rem;
 }
 
 /* CV download button (layouts/partials/blox/resume-biography-3.html). The vendor
@@ -384,6 +389,15 @@ html {
 
 .navbar-brand:hover {
   color: #047857 !important;
+}
+
+/* Rounded bottom corners on the fixed navbar, echoing the rounded-corner look of
+   the publication cards. #site-header already carries its own white/dark
+   background + shadow, so rounding it directly clips cleanly with no extra
+   overflow handling needed. */
+#site-header.header {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 #search_toggle svg,
