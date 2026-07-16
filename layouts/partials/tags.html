@@ -1,0 +1,10 @@
+{{/* Local override of the theme's partials/tags.html: renders tags as plain, non-clickable
+     labels instead of links to tag archive pages. */}}
+{{ $taxonomy := "tags" }}
+{{ if .Param $taxonomy }}
+<div class="flex justify-center flex-wrap gap-2">
+  {{ range $index, $value := (.GetTerms $taxonomy) }}
+  <span class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:text-primary-300">{{ .LinkTitle }}</span>
+  {{ end }}
+</div>
+{{ end }}
