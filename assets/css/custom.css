@@ -147,9 +147,11 @@ html {
    because the theme's precompiled Tailwind bundle wasn't scanned against this
    local template, so ad-hoc utility classes here would silently do nothing. */
 .pub-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  cursor: pointer;
   transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
@@ -162,6 +164,21 @@ html {
 .dark .pub-card:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   border-color: #059669;
+}
+
+/* "Stretched link" pattern: fills the whole card so any blank space is clickable too,
+   sitting below the real interactive elements (thumbnail, title, PDF/Project/etc.
+   buttons) so those still work as their own independent links/hover targets. */
+.pub-card-stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.pub-card-thumb,
+.pub-card-body {
+  position: relative;
+  z-index: 1;
 }
 
 .pub-card-thumb {

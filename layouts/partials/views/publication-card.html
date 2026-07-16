@@ -13,6 +13,13 @@
 
 <div class="pub-card w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
+  {{/* Makes the whole card clickable (not just the thumbnail/title) via the "stretched
+       link" pattern: an absolutely-positioned link fills the card at the base z-index,
+       while the real interactive bits (thumbnail, title, PDF/Project/etc. buttons) sit
+       above it at a higher z-index so they stay independently clickable rather than
+       nesting <a> inside <a>, which is invalid HTML. */}}
+  <a href="{{ $item.RelPermalink }}" class="pub-card-stretched-link" aria-label="{{ $item.Title | plainify }}"></a>
+
   {{ with $resource }}
     {{ $image := .Fit "320x320" }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
