@@ -150,6 +150,18 @@ html {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.pub-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border-color: #6ee7b7;
+  transform: translateY(-2px);
+}
+
+.dark .pub-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  border-color: #059669;
 }
 
 .pub-card-thumb {

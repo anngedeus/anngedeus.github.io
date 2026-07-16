@@ -1,4 +1,4 @@
-{{/* Custom view: publication-card. Thumbnail + title + authors + venue + abstract + links. */}}
+{{/* Custom view: publication-card. Thumbnail + title + authors + venue + links. */}}
 {{/* Note: layout-critical classes (row/column switch, thumbnail width, flex-grow) are defined
      in assets/css/custom.css as plain CSS rather than Tailwind utility classes, because this
      theme ships a precompiled Tailwind bundle that was never scanned against this local
@@ -35,9 +35,6 @@
     </div>
     {{ with ($item.Params.publication | default $item.Params.publication_short) }}
     <div class="text-gray-500 dark:text-gray-400 mb-3">{{ . | markdownify }}</div>
-    {{ end }}
-    {{ with $item.Params.abstract }}
-    <p class="text-gray-600 dark:text-gray-400">{{ . | markdownify }}</p>
     {{ end }}
     {{ if not $resource }}
     <div class="pub-card-links text-sm" style="margin-top: 0.75rem;">
