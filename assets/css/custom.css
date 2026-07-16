@@ -90,25 +90,52 @@
   font-size: 1rem;
 }
 
-/* Site-wide font: Roboto, replacing the theme's default (Inter var). */
+/* Site-wide font: Open Sans, replacing the theme's default (Inter var). */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/Roboto-Regular.woff2) format('woff2');
+  src: url(/fonts/OpenSans-Variable.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/Roboto-Bold.woff2) format('woff2');
+  src: url(/fonts/OpenSans-Variable.woff2) format('woff2');
 }
 
 html {
-  font-family: 'Roboto', ui-sans-serif, system-ui, sans-serif !important;
+  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Titles, headings, the bio hero name, and the navbar logo all use Playfair
+   Display instead, so they read as a distinct display face against the Open
+   Sans body text. Most page/section titles are real h1-h6 tags; the two
+   exceptions are the bio hero's name (a styled div, not a heading) and the
+   Publications section title (also a styled div). */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/PlayfairDisplay-Variable.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/PlayfairDisplay-Variable.woff2) format('woff2');
+}
+
+h1, h2, h3, h4, h5, h6,
+.portrait-title,
+#papers .text-3xl.font-bold {
+  font-family: 'Playfair Display', ui-serif, serif;
 }
 
 /* Widen the narrow ~65ch prose column used by markdown blocks (e.g. Research
@@ -272,6 +299,13 @@ html {
   color: #065f46 !important;
 }
 
+/* Advisor/collaborator links in the About Me text (e.g. "Dr. Angelique Taylor")
+   get their default prose underline removed; the green color already marks
+   them as links. */
+.bio-text a {
+  text-decoration: none;
+}
+
 /* Fade the hero's green blob background (assets/media/website.svg) toward the
    page background. `.home-section-bg` is the sole element carrying the blob
    image + black backing color (position:absolute, behind all content, no
@@ -371,11 +405,12 @@ html {
   }
 }
 
-/* Logo ("AKG", set via header.navbar.logo.text in params.yaml): green text in a
-   serif face so it reads as a distinct wordmark from the Roboto body text. */
+/* Logo ("AKG", set via header.navbar.logo.text in params.yaml): green text in
+   Playfair Display so it reads as a distinct wordmark from the Open Sans body
+   text, and matches the site's other titles/headings. */
 .navbar-brand {
   color: #059669 !important;
-  font-family: Georgia, 'Times New Roman', ui-serif, serif;
+  font-family: 'Playfair Display', ui-serif, serif;
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: 0.14em;
