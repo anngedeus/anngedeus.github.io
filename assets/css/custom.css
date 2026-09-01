@@ -427,4 +427,10 @@ h1, h2, h3, h4, h5, h6,
   height: 18px;
 }
 
+/* Green accent border under the navbar, tying it to the logo/link accent color
+   used throughout the site instead of a plain white/gray bar. */
+#site-header.header {
+  border-bottom: 3px solid #059669;
+}
+
 
